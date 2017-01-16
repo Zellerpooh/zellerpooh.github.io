@@ -1,5 +1,5 @@
 # Basic
-title: Z
+title: Zeller
 subtitle: 个人站
 description: 欢迎来到我的个人站~
 # 头像里面的标题
@@ -15,8 +15,8 @@ comment:
 
 # Social
 social:
-    weibo: Zellerpooh
-    github: https://github.com/Zellerpooh
+    weibo: 3625051610
+    github: Zellerpooh
     # twitter:
     mail: zellerpooh@gmail.com
 
@@ -27,9 +27,9 @@ baidu:
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
-ga:
-    id: UA-84134159-3
-    host: auto
+# ga:
+#     id: UA-84134159-3
+#     host: auto
 
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
