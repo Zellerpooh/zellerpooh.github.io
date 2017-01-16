@@ -1,7 +1,7 @@
 # Basic
 title: Zeller
 subtitle:
-description: It's wonderful to have a beginner's mind。
+description: It's wonderful to have a beginner's mind.
 # 头像里面的标题
 avatarTitle: Zellerpooh
 # 头像里面的描述
@@ -59,7 +59,7 @@ blog_button:
 nav:
     - {title: Archive, description: archive, url: '/archive'}
     - {title: Category, description: tags, url: '/tags'}
-    - {title: Aboutme, description: about, url: '/about'}
+    - {title: About, description: about, url: '/about'}
 
 
 # Pagination
