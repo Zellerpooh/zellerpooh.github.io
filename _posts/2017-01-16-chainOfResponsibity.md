@@ -5,13 +5,14 @@ date: 2017-01-16
 description: "《Android源码设计模式》笔记(十)——责任链模式"
 tag: Design Pattern
 ---   
-#### 文章为阅读《Android源码设计模式解析与实战》的一些感悟与笔记，有理解错误的地方，欢迎指正，要领略精髓还是要自己去阅读原书。
+
+    文章为阅读《Android源码设计模式解析与实战》的一些感悟与笔记，有理解错误的地方，欢迎指正，要领略精髓还是要自己去阅读原书。
 
 ### 原书作者的博客
 
-### [Mr.Simple](http://blog.csdn.net/bboyfeiyu)
+ [Mr.Simple](http://blog.csdn.net/bboyfeiyu)
 
-### [aigestudio](http://blog.csdn.net/aigestudio)
+ [aigestudio](http://blog.csdn.net/aigestudio)
 
 ### 定义
 
@@ -31,6 +32,7 @@ tag: Design Pattern
 ### 代码实现
 
 * 抽象处理者（AbstractHandler）：可以清楚的看到，抽象处理者中持有对下一个处理节点的Handler对象的引用，handleRequest方法中实现了处理逻辑，当该处理这能处理时调用handle()方法处理，没有能力处理时，调用下一个处理者的handle()方法进行处理，实现了解耦。
+
 ```bash
 
 public abstract class AbstractHandler {
@@ -51,6 +53,7 @@ public abstract class AbstractHandler {
     protected abstract int getHandleLevel();
 
     protected abstract void handle(AbstractRequest request);
+
 }
 
 ```
@@ -136,6 +139,7 @@ public class Client {
   责任链模式能将请求者和处理者关系进行解耦，提高代码的灵活性。而缺点也显而易见，对链中请求处理者的遍历，如果处理者太多那么遍历必定会影响性能，特别是一些递归调用。
 
 <br>
+
 ### 相关推荐
 
 [事件分发机制原理](https://github.com/GcsSloop/AndroidNote/blob/master/CustomView/Advance/%5B12%5DDispatch-TouchEvent-Theory.md)
