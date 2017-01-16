@@ -1,5 +1,5 @@
 # Basic
-title: Zellerpooh
+title: Zeller
 subtitle:
 description: It's wonderful to have a beginner's mind。
 # 头像里面的标题
@@ -53,13 +53,13 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: BlogIndex
+    title: Home
 
 # Navigation buttons in the front page.s
 nav:
     - {title: Archive, description: archive, url: '/archive'}
-    - {title: Tags, description: tags, url: '/tags'}
-    - {title: AboutMe, description: about, url: '/about'}
+    - {title: Category, description: tags, url: '/tags'}
+    - {title: Aboutme, description: about, url: '/about'}
 
 
 # Pagination
