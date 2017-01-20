@@ -6,13 +6,13 @@ description: "简单的Android带历史记录的搜索功能实现"
 tag: Android
 ---   
 
-这两天闲来无事，就把前短时间项目中的搜索功能抽取出来，重新写一下，搜索功能虽然简单，但是设计到得知识点也挺多的，就当做一个总结吧。
+这两天闲来无事，就把前短时间项目中的搜索功能抽取出来，重新写一下，搜索功能虽然简单，但是涉及到的知识点也挺多的，就当做一个总结吧。
 代码地址在最后面，话不多说，上效果图 ^_^
   ![searchdemo.gif](http://upload-images.jianshu.io/upload_images/1859111-be6ba876e6df7526.gif?imageMogr2/auto-orient/strip)
 
 ### 历史记录的存储
 
-首先来说下关于历史记录的存储，历史记录的存储方式其实可以有很多方法，可以用sp，数据库等等，那么就直接开撸吧。说开撸你还真以为就直接开撸了，还是先想想吧，我们做历史记录存储的时候需要提供什么给调用者，其实很简单无非就是可以增删改查吗。为了遵守里氏替换原则，就先写了个抽象类BaseHistoryStorage，里面有几个抽象方法，至于是什么自己看吧。这样不管你是用SP还是数据库甚至其他更牛的技术，只需要集成Base类，实现这些抽象方法就行了，至于你是怎么实现的，我才不管呢。
+首先来说下关于历史记录的存储，历史记录的存储方式其实可以有很多方法，可以用sp，数据库等等，那么就直接开撸吧。说开撸你还真以为就直接开撸了，还是先想想吧，我们做历史记录存储的时候需要提供什么给调用者，其实很简单无非就是可以增删改查吗。为了遵守里氏替换原则，就先写了个抽象类BaseHistoryStorage，里面有几个抽象方法，至于是什么自己看吧。这样不管你是用SP还是数据库甚至其他更牛的技术，只需要继承Base类，实现这些抽象方法就行了，至于你是怎么实现的，我才不管呢。
 
 ```bash
 
@@ -350,7 +350,9 @@ model中的内容就简单了，创建一个前面实现的BaseStorage对象，�
 
 上面就是View中实现的方法，获得历史记录是，告诉adapter去刷新列表就行了。接下来就只剩下View中一些简单的点击事件的处理了，搜索的时候调用```
  mSearchPresenter.search(value);```,清空的时候调用``` mSearchPresenter.clear();```是不是感觉so easy，妈妈再也不用担心我的学习了，当然别忘了presenter需要在activity的onCreate方法中进行实例化。
+ 
 最后呢，再给大家介绍几个技巧：
+
 1.  不要忘记把搜索框EditText设置成Search模式     
 
 ```bash
@@ -407,13 +409,15 @@ etSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
                 message.what = MSG_SEARCH;
                 mHandler.sendMessageDelayed(message, 500); //自动搜索功能 删除
             }
-        } }；//模糊搜索 private static final int MSG_SEARCH = 1;
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-        search(etSearch.getText().toString().trim());
-        }  
-    };
+        } }；
+        //模糊搜索
+        private static final int MSG_SEARCH = 1;
+        private Handler mHandler = new Handler() {
+          @Override
+          public void handleMessage(Message msg) {
+            search(etSearch.getText().toString().trim());
+          }  
+        };
 
 ```
 
