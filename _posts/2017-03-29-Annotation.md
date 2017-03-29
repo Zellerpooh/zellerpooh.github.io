@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "奇妙的注解(一)——初识注解"
+title: "奇妙的注解(一)  初识注解"
 date: 2017-03-29
-description: "奇妙的注解(一)——初识注解"
+description: "奇妙的注解(一)  初识注解"
 tag: Annotation
 ---  
 > 雄关漫道真如铁，而今迈步从头越。
