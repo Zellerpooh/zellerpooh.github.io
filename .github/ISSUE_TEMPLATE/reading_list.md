@@ -2,7 +2,7 @@
 name: Reading list 
 about: Use this template for tracking new reading.
 title: "《[FEATURE NAME]》"
-projects: 3
+projects: zellerpooh.github.io/3
 author: xxx
 resource: ...
 score: ★...
