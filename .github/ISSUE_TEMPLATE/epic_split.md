@@ -1,7 +1,8 @@
 ---
-name: Project split
-about: Use this template for tracking new projects.
+name: Epic 
+about: Use this template for tracking new epic.
 title: "[DATE]: [FEATURE NAME]"
+labels: Epic
 ---
 ## 项目纵向拆分
 
