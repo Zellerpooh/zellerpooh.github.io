@@ -2,7 +2,7 @@
 name: Reading list 
 about: Use this template for tracking new reading.
 title: "《[FEATURE NAME]》"
-project: Reading List
+projects: Reading List
 author: xxx
 resource: ...
 score: ★...
