@@ -1,8 +1,7 @@
 ---
 name: Film list 
-about: Use this template for tracking new film.
-title: "《[FEATURE NAME]》"
-projects: Film List
+about: Film
+title: "《...》"
 author: xxx
 resource: ...
 score: ★...
