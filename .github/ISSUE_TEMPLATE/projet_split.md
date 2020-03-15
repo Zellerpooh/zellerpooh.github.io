@@ -1,3 +1,8 @@
+---
+name: Project split
+about: Use this template for tracking new projects.
+title: "[DATE]: [FEATURE NAME]"
+---
 ## 项目纵向拆分
 
 ### ⓵ 定义目标和原则
