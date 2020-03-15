@@ -2,7 +2,7 @@
 name: Film list 
 about: Use this template for tracking new film.
 title: "《[FEATURE NAME]》"
-project: Reading List
+projects: Film List
 author: xxx
 resource: ...
 score: ★...
